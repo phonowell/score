@@ -1,0 +1,14 @@
+#noEnv
+#persistent
+#singleInstance force
+#useHook
+
+sendMode, Event
+
+; bind key
+
+f12::exitApp
+
+f11::
+xxx
+return

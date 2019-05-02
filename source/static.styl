@@ -1,0 +1,59 @@
+html, body
+  background-color #fff
+  margin 0
+  padding 0
+
+$width = 240px
+$height = 120px
+
+#group-file
+  width $width
+  height 80px
+  position relative
+
+#picker
+  position absolute
+  width $width - 8px * 2
+  height 80px - 8px * 2
+  margin 0
+  padding 0
+  left 8px
+  top @left
+  color #555
+  border 2px dashed
+  border-width 2px
+  border-radius 8px
+  box-sizing border-box
+  text-align center
+  line-height @height - @border-width * 2
+  font-size 12px
+  cursor pointer
+  user-select none
+
+  &:hover
+    background-color rgba(#000, 0.05)
+
+#ipt-file
+  z-index -1
+  opacity 0
+  visibility hidden
+
+#group-long
+  width $width
+  height 40px
+  position relative
+  line-height @height
+
+#ipt-long
+  display block
+  width $width - 8px * 2
+  height 40px - 8px
+  margin 0 8px
+  padding 0 @height * 0.5
+  border 0
+  border-radius @height * 0.5
+  outline 0
+  font-size 12px
+  background-color #eee
+  color #777
+  box-sizing border-box

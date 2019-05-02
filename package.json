@@ -1,1 +1,25 @@
-{"name":"score","version":"0.0.1","description":"score","main":"index.js","scripts":{},"repository":{"type":"git","url":"https://github.com/phonowell/score.git"},"keywords":["score"],"author":"Mimiko Phonowell <phonowell@gmail.com>","license":"GPL-3.0+","url":"https://github.com/phonowell/score","bugs":{"url":"https://github.com/phonowell/score/issues"},"homepage":"https://github.com/phonowell/score","dependencies":{}}
+{
+  "name": "score",
+  "version": "0.0.1",
+  "description": "score",
+  "main": "./build/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phonowell/score.git"
+  },
+  "keywords": [
+    "score"
+  ],
+  "author": "Mimiko Phonowell <phonowell@gmail.com>",
+  "license": "GPL-3.0+",
+  "url": "https://github.com/phonowell/score",
+  "bugs": {
+    "url": "https://github.com/phonowell/score/issues"
+  },
+  "homepage": "https://github.com/phonowell/score",
+  "dependencies": {},
+  "devDependencies": {
+    "fire-keeper": "^0.0.147"
+  }
+}
