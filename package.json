@@ -20,6 +20,6 @@
   "homepage": "https://github.com/phonowell/score",
   "dependencies": {},
   "devDependencies": {
-    "fire-keeper": "^0.0.147"
+    "fire-keeper": "^0.0.148"
   }
 }
