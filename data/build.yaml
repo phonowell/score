@@ -1,0 +1,17 @@
+productName: Score Maker
+appId: Score-Maker
+copyright: Copyright © 2019 Mimiko
+directories:
+  output: dist
+asar: true
+compression: maximum
+electronVersion: 5.0.1
+files: ['build/**/*']
+win:
+  target: nsis
+nsis:
+  oneClick: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: false

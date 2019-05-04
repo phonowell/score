@@ -28,7 +28,7 @@ class M
 
     # compile
     pathTemp = './temp/lib.min.js'
-    pathStatic = './source'
+    pathStatic = './source/shell'
     await $.chain $
     .write_ pathTemp, content
     .compile_ pathTemp, pathStatic

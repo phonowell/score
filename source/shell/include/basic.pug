@@ -1,0 +1,18 @@
+//- function
+
+mixin style(src)
+  link(
+    href = src + '.css'
+    rel = 'stylesheet'
+    type = 'text/css'
+  )
+
+mixin script(src)
+  script(
+    defer
+    src = src + '.js'
+  )
+
+//- variable
+- app = {}
+- app.title = '乐谱生成器 - 妞妞特供版'

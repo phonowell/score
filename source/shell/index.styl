@@ -1,0 +1,61 @@
+@require '../../gurumin/style/include/rule'
+
+normalize-css()
+global-reset()
+
+$width = 240px
+$height = 188px
+
+@require 'include/stage'
+
+// long
+
+#ipt-long
+  display block
+  position relative
+  width 100%
+  height 32px
+  box-sizing border-box
+  margin 8px 0 0
+  padding 0 @height * 0.5
+  border 0
+  border-radius @height * 0.5
+  outline 0
+  font-size 12px
+  background-color #eee
+  color #777
+  transition all 300ms ease
+
+  &:focus
+    transform translateY(-2px)
+    box-shadow 0 2px 4px rgba(#09f, 0.5)
+
+  &.status-error
+    background-color #f09
+    color #fff
+    
+#picker
+  width 100%
+  height 80px
+  box-sizing border-box
+  margin 8px 0 0
+  padding 0
+  color #555
+  border 2px dashed
+  border-width 2px
+  border-radius 8px
+  box-sizing border-box
+  text-align center
+  line-height @height - @border-width * 2
+  font-size 12px
+  cursor pointer
+  user-select none
+  transition all 300ms ease
+
+  &:hover
+    background-color rgba(#000, 0.05)
+
+#ipt-file
+  z-index -1
+  opacity 0
+  visibility hidden

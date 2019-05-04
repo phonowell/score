@@ -56,13 +56,20 @@ class M
     # js
     listSource = @exclude './source/**/*.js'
     $.watch listSource, (e) => await @copy_ e.path
+    
     # pug
     listSource = @exclude './source/**/*.pug'
     $.watch listSource, (e) => await @compile_ e.path
+    # special
+    $.watch './source/shell/include/**/*.pug', =>
+      await @compile_ './source/shell/index.pug'
 
     # styl
     listSource = @exclude './source/**/*.styl'
     $.watch listSource, (e) => await @compile_ e.path
+    # special
+    $.watch './source/shell/include/**/*.styl', =>
+      await @compile_ './source/shell/index.styl'
 
     # txt
     listSource = @exclude './source/**/*.txt'

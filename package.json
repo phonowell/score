@@ -1,8 +1,8 @@
 {
   "name": "score",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "score",
-  "main": "./build/index.js",
+  "main": "./build/app.js",
   "scripts": {},
   "repository": {
     "type": "git",
@@ -18,8 +18,9 @@
     "url": "https://github.com/phonowell/score/issues"
   },
   "homepage": "https://github.com/phonowell/score",
-  "dependencies": {},
-  "devDependencies": {
-    "fire-keeper": "^0.0.148"
-  }
+  "dependencies": {
+    "fire-keeper": "^0.0.149",
+    "node-notifier": "^5.4.0"
+  },
+  "devDependencies": {}
 }

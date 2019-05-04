@@ -3,28 +3,20 @@ $ = require 'fire-keeper'
 class M
 
   ###
-  mapPlatform
-
   execute_()
   ###
-
-  mapPlatform:
-    darwin: 'darwin'
-    macos: 'darwin'
-    win32: 'win32'
-    windows: 'win32'
 
   execute_: ->
 
     await $.task('build')()
 
-    platform = @mapPlatform[$.os]
-    platform or throw new Error "invalid platform '#{platform}'"
+    await $.remove_ './dist'
 
     cmd = [
-      'electron-packager .'
-      '--electronVersion=5.0.0'
-      "--platform=#{platform}"
+      'electron-builder .'
+      "--#{$.os}"
+      '--x64'
+      '--config=./data/build.yaml'
     ].join ' '
 
     await $.exec_ cmd

@@ -14,7 +14,7 @@ class M
   translate(listIn)
   ###
 
-  delay: 50
+  delay: 10
   mapKey:
     '0': '0'
     '1': '1'
@@ -37,7 +37,7 @@ class M
     unless source?.length
       throw new Error "invalid source '#{source}'"
 
-    unless 200 <= long <= 2000
+    unless 200 <= long <= 1e3
       throw new Error "innvalid long '#{long}'"
 
     @long = long
@@ -110,7 +110,7 @@ class M
 
   save_: (pathTarget, listIn) ->
 
-    contWrapper = await $.read_ "#{__dirname}/wrapper.txt"
+    contWrapper = await $.read_ "#{__dirname}/../data/wrapper.txt"
 
     cont = contWrapper.replace /xxx/
     , listIn.join '\n'

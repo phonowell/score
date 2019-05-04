@@ -1,0 +1,33 @@
+include include/basic
+doctype html
+html
+  head
+    include include/meta
+    title #{app.title}
+    +style('index')
+  body
+    //- html
+    #stage
+      #title
+        p #{app.title}
+        #btn-close
+      .group
+        input#ipt-long(
+          max = 1000
+          min = 200
+          placeholder = '节拍时长(ms)'
+          step = 50
+          type = 'number'
+        )
+      .group
+        #picker 选择文件
+        input#ipt-file(
+          accept = '.txt'
+          multiple = 'false'
+          type = 'file'
+        )
+    //- script
+    script if (typeof module === 'object') {window.module = module; module = undefined;}
+    +script('lib.min')
+    script if (window.module) module = window.module;
+    +script('index')

@@ -1,0 +1,84 @@
+html, body
+  width $width
+  height $height
+  background none
+  margin 0
+  padding 0
+  overflow hidden
+
+#stage
+  width $width - 8px * 2
+  height $height - 8px * 2
+  box-sizing border-box
+  margin 8px
+  padding 4px
+  border-radius 8px
+  background-image linear-gradient(top, #f09, #f90)
+  box-shadow 0 2px 2px rgba(#f90, 0.2)
+
+  &:before
+    content ''
+    display block
+    position absolute
+    width @width - @padding * 2
+    height @height - @padding * 2
+    background-image linear-gradient(top, #fff, #fafafa)
+    border-radius 4px
+    pointer-events none
+    z-index 0
+
+  .group
+    position relative
+    width 100%
+    padding 0 8px
+    box-sizing border-box
+
+#title
+  position relative
+  width 100%
+  height 24px
+  box-sizing border-box
+  margin 0
+  padding 0 0 0 8px
+  line-height @height
+  font-size 12px
+  color #555
+  z-index 5
+  user-select none
+  -webkit-app-region drag
+  cursor move
+
+#btn-close
+  position absolute
+  width 12px
+  height @width
+  right 6px
+  top 6px
+  border-radius 4px
+  user-select none
+  background-color #f09
+  text-align center
+  line-height @height
+  font-size 12px
+  -webkit-app-region no-drag
+  cursor pointer
+  z-index 5
+
+  &:before
+    content ''
+    display block
+    position absolute
+    width 20px
+    height @width
+    left -4px
+    top @left
+    border-radius 50%
+    background-color rgba(#f09, 0.5)
+    opacity 0
+    transform scale(0)
+    transition all 300ms ease
+
+  &:hover
+    &:before
+      opacity 1
+      transform scale(1)

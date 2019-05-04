@@ -7,29 +7,31 @@ app.on 'window-all-closed', ->
 
 app.on 'ready', ->
 
+  isDebug = true
+
   option =
     width: 240
-    height: 120
+    height: 188
     useContentSize: true
-    resizable: false
-    minimizable: true
+    resizable: isDebug
+    minimizable: false
     maximizable: false
     alwaysOnTop: true
     fullscreen: false
     fullscreenable: false
-    skipTaskbar: true
     show: false
+    frame: false
     acceptFirstMouse: true
     autoHideMenuBar: true
-    backgroundColor: '#fff'
+    transparent: true
     webPreferences:
-      devTools: false
+      devTools: isDebug
       nodeIntegration: true
   win = new BrowserWindow option
 
-  win.loadURL "file://#{__dirname}/index.html"
+  win.loadURL "file://#{__dirname}/shell/index.html"
 
-  unless option.webPreferences.devTools == false
+  if isDebug
     win.openDevTools()
 
   win.on 'closed', ->
